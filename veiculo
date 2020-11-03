@@ -1,0 +1,33 @@
+public class Veiculo {
+	private String placa;
+	private int ano;
+	private Proprietario proprietario;
+  private Estacionamento estacionamento;
+	
+	public void setPlaca(String placa) {
+		this.placa = placa;
+	}
+	public void setAno(int ano) {
+		this.ano = ano;
+	}
+	public void setProprietario(Proprietario proprietario) {
+		this.proprietario = proprietario;
+	}
+  public void setEstacionamento(Estacionamento estacionamento) {
+		this.estacionamento = estacionamento;
+	}
+
+	
+	public String getPlaca() {
+		return placa;
+	}
+	public int getAno() {
+		return ano;
+	}
+	public Proprietario getProprietario() {
+		return proprietario;
+	}
+	public Estacionamento getEstacionamento() {
+		return estacionamento;
+	}
+}
