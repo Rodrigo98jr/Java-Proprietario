@@ -1,0 +1,26 @@
+public class Telefone {
+	private int ddd;
+	private long prefixo;
+	private long numero;
+	
+	public void setDdd(int ddd) {
+		this.ddd = ddd;
+	}
+	public void setPrefixo(long prefixo) {
+		this.prefixo = prefixo;
+	}
+	public void setNumero(long numero) {
+		this.numero = numero;
+	}
+
+	
+	public int getDdd() {
+		return ddd;
+	}
+	public long getPrefixo() {
+		return prefixo;
+	}
+	public long getNumero() {
+		return numero;
+	}
+}
