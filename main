@@ -1,0 +1,84 @@
+public class Principal {
+	Veiculo v1;
+  Estacionamento es1;
+  Proprietario p1;
+	
+	public void entraDados() { 
+		Telefone t1 = new Telefone();
+		t1.setDdd(16);
+		t1.setPrefixo(55);
+    t1.setnumero(33849356);	
+		Telefone t2 = new Telefone();
+		t2.setDdd(21);
+		t2.setPrefixo(99);
+    t2.setnumero(9784554);	
+
+    Endereco en1 = new Endereco();
+		en1.setRua("Bairro Lima");
+		en1.setCidade("Taquaritinga");	
+    Endereco en2 = new Endereco();
+		en2.setRua("Machado Silveira");
+		en2.setCidade("Matão");
+		
+		es1 = new Estacionamento();
+		es1.setNome("Jacob altocarros");
+		es1.setTelefone(t1);
+    es1.setEndeco(en1);
+
+		p1 = new Proprietario();
+    p1.setCpf("123987456");
+		p1.setNome("Caio Silva");
+		p1.setTelefone(t2);
+    p1.setEndeco(en2);
+		
+    v1 = new Veiculo();
+		v1.setPlaca("USB 3256");
+    v1.setAno(1997);
+		v1.setEstacionamento(es1);
+    v1.setProprietario(p1);
+	}
+
+	public void mostraDados() {
+		System.out.println ("---Estacionamento---");
+		System.out.println ("Nome     :" + es1.getNome());
+		System.out.println ("T.ddd    :" + es1.getTelefone().getDdd());
+		System.out.println ("T.prefixo:" + es1.getTelefone().getPrefixo());
+		System.out.println ("T.Numero :" + es1.getTelefone().getNumero());
+		System.out.println ("E.rua    :" + es1.getEndereco().getRua());
+		System.out.println ("E.cidade :" + es1.getEndereco().getCidade());
+
+    System.out.println ("---Proprietario---");
+    System.out.println ("Cpf      :" + p1.getCpf());
+		System.out.println ("Nome     :" + p1.getNome());
+		System.out.println ("T.ddd    :" + p1.getTelefone().getDdd());
+		System.out.println ("T.prefixo:" + p1.getTelefone().getPrefixo());
+		System.out.println ("T.Numero :" + p1.getTelefone().getNumero());
+		System.out.println ("E.rua    :" + p1.getEndereco().getRua());
+		System.out.println ("E.cidade :" + p1.getEndereco().getCidade());
+
+
+    System.out.println ("---Veiculo---");
+    System.out.println ("Placa       :" + v1.getNome());
+    System.out.println ("Ano         :" + v1.getNome());
+		System.out.println ("Es.nome     :" + v1.getEstacionamento().getNome());
+		System.out.println ("T.es.ddd    :" + v1.getEstacionamento().getTelefone().getDdd());
+		System.out.println ("T.es.prefixo:" + v1.getEstacionamento().getTelefone().getPrefixo());
+		System.out.println ("T.es.Numero :" + v1.getEstacionamento().getTelefone().getNumero());
+		System.out.println ("E.es.rua    :" + v1.getEstacionamento().getEndereco().getRua());
+		System.out.println ("E.es.cidade :" + v1.getEstacionamento().getEndereco().getCidade());
+    System.out.println ("P.cpf       :" + v1.getProprietario().getCpf());
+		System.out.println ("P.nome      :" + v1.getProprietario().getNome());
+		System.out.println ("T.p.ddd     :" + v1.getProprietario().getTelefone().getDdd());
+		System.out.println ("T.p.prefixo :" + v1.getProprietario().getTelefone().getPrefixo());
+		System.out.println ("T.p.Numero  :" + v1.getProprietario().getTelefone().getNumero());
+		System.out.println ("E.p.rua     :" + v1.getProprietario().getEndereco().getRua());
+		System.out.println ("E.p.cidade  :" + v1.getProprietario().getEndereco().getCidade());
+	}
+	
+	
+	public static void main (String args[]) {
+		Principal programa = new Principal();
+		programa.entraDados();
+		programa.mostraDados();
+	}
+}
