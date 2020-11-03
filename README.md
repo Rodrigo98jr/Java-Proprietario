@@ -1,2 +1,2 @@
 # java-proprietario
-Projeto básico de proprietário
+Projeto básico de proprietários de carros
